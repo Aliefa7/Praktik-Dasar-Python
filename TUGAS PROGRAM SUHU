@@ -1,0 +1,89 @@
+suhu = []
+while True:
+    isi = input("masukkan nilai suhu (ketik 'selesai' untuk berhenti): ")
+    if isi == "selesai":
+        break
+    suhu.append(int(isi))
+
+print("\ninput sudah selesai")
+print("Data suhu yang didapatkan :", suhu)
+
+# ubah data suhu
+while True:
+    ubah = input("\nIngin ubah nilai suhu (ketik 'ya' untuk ubah, 'tidak' untuk lanjut): ")
+    if ubah == "tidak":
+        break
+
+    index_ubah = int(input("\nmasukkan nilai index : "))
+    VALUE_ubah = int(input("masukkan nilai perubahan suhu : "))
+    suhu[index_ubah] = VALUE_ubah
+
+    print("\nData berhasil diubah")
+    print("Data suhu yang didapatkan saat ini :")
+    for i in suhu:
+        print(i)
+
+# remove suhu
+while True:
+    hapus = input("\nIngin remove suhu (ketik 'ya' untuk hapus, 'tidak' untuk lanjut): ")
+    if hapus == "tidak":
+        break
+
+    index_dihapus = int(input("\nmasukkan nilai index : "))
+    del suhu[index_dihapus]
+
+    print("\nRemove nilai suhu berhasil")
+    print("Data suhu yang didapatkan saat ini :")
+    for i in suhu:
+        print(i)
+
+# tampilkan hasil akhir
+print("\nData suhu akhir :")
+for i in suhu:
+    print(i)
+
+* HASILNYA ( PEMBACAAN ) *
+
+>> masukkan nilai suhu (ketik 'selesai' untuk berhenti):  10
+   masukkan nilai suhu (ketik 'selesai' untuk berhenti):  20
+   masukkan nilai suhu (ketik 'selesai' untuk berhenti):  30
+   masukkan nilai suhu (ketik 'selesai' untuk berhenti):  40
+   masukkan nilai suhu (ketik 'selesai' untuk berhenti):  50
+   masukkan nilai suhu (ketik 'selesai' untuk berhenti):  selesai
+
+>> input sudah selesai
+>> Data suhu yang didapatkan : [10, 20, 30, 40, 50]
+
+>> Ingin ubah nilai suhu (ketik 'ya' untuk ubah, 'tidak' untuk lanjut):  ya
+
+>> masukkan nilai index :  0
+>> masukkan nilai perubahan suhu :  100
+
+>> Data berhasil diubah
+>> Data suhu yang didapatkan saat ini :
+100
+20
+30
+40
+50
+
+>> Ingin ubah nilai suhu (ketik 'ya' untuk ubah, 'tidak' untuk lanjut):  tidak
+
+>> Ingin remove suhu (ketik 'ya' untuk hapus, 'tidak' untuk lanjut):  ya
+
+>> masukkan nilai index :  0
+
+>> Remove nilai suhu berhasil
+>> Data suhu yang didapatkan saat ini :
+20
+30
+40
+50
+
+>> Ingin remove suhu (ketik 'ya' untuk hapus, 'tidak' untuk lanjut):  tidak
+
+>> Data suhu akhir :
+20
+30
+40
+50
