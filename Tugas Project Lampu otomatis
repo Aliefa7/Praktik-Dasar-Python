@@ -1,0 +1,19 @@
+# Project Lampu Jalan dengan Intensitas Cahaya
+import random
+
+jumlah_hari = 7
+luaslampu = 2
+for hari in range(1, jumlah_hari + 1):
+    totallux = random.randint(300, 1000)
+    intensitas_cahaya = totallux / luaslampu
+
+    print("Pada hari ke-", hari)
+    print("Total lux:", totallux)
+    print("Nilai intensitas cahaya:", intensitas_cahaya)
+
+    if intensitas_cahaya > 800:
+        print("Situasi terang dengan kondisi lampu mati\n")
+    elif intensitas_cahaya > 400:
+        print("Situasi sedikit terang dengan kondisi lampu redup\n")
+    else:
+        print("Situasi gelap dengan kondisi lampu menyala\n")
