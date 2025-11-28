@@ -1,0 +1,17 @@
+nama = ["pipaw","byan","nafan","febi","eka","azha","andrie"]
+LaprakA = [90,70,40,50,30,60,10]
+LaprakB = [87,93,88,96,50,70,90]
+
+rata2_LaprakA = sum(LaprakA) / len(LaprakA)
+print("Nilai rata-rata untuk laprak A : ", rata2_LaprakA)
+rata2_LaprakB = sum(LaprakB) / len(LaprakB)
+print("Nilai rata-rata untuk laprak B : ", rata2_LaprakB)
+print()
+
+for i in range(len(nama)):
+  rata2_perorang = (LaprakA[i]+ LaprakB[i]) / 2
+  if LaprakA[i] > rata2_LaprakA and LaprakB[i] > rata2_LaprakB:
+     print(nama[i],"anda dinyatakan lulus dengan nilai rata-rata:", rata2_perorang, "\nLaprakA :",LaprakA[i], "dan LaprakB :", LaprakB[i],)
+  else:
+    print(nama[i],"anda dinyatakan belum lulus dengan nilai rata-rata :", rata2_perorang, "\nLaprakA :",LaprakA[i], "dan LaprakB :", LaprakB[i])
+  print()
