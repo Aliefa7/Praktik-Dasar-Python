@@ -1,0 +1,72 @@
+print("=== SELAMAT DATANG DI SMART PARKING TOKO BONEKA PIPAW ===")
+
+plat = []
+
+while True:
+    no_plat = input("\nMasukan nomor plat mobil (ketik 'selesai' jika sudah) : ")
+    if no_plat.lower() == "selesai":
+        break
+    plat.append(no_plat)
+
+while True:
+    print("\n=== MENU MONITORING PLAT MOBIL ===")
+    print("1. Daftar Plat Mobil")
+    print("2. Mobil Ingin Keluar")
+    print("3. Monitoring Plat Mobil Selesai")
+    pilihan = input("Pilih menu (1/2/3): ")
+
+    if pilihan == "1":
+        print("\n=== DATA PLAT MOBIL ===")
+        if plat:
+            for n, p in enumerate(plat, start=1):
+                print(f"Mobil {n} : {p}")
+        else:
+            print("Tidak ada mobil yang terdaftar.")
+
+    elif pilihan == "2":
+        keluar = input("No Plat Mobil yang ingin keluar : ")
+        if keluar in plat:
+            plat.remove(keluar)
+            print("Mobil dengan plat", keluar, "boleh keluar.")
+        else:
+            print("Plat mobil tidak ditemukan, maka mobil tidak boleh keluar.")
+
+    elif pilihan == "3":
+        print("Monitoring selesai. Terima kasih!")
+        break
+
+    else:
+        print("Pilihan tidak valid, silakan coba lagi.")
+
+
+
+PEMBACAAN PROGRAM
+=== SELAMAT DATANG DI SMART PARKING TOKO BONEKA PIPAW ===
+
+=== MENU MONITORING PLAT MOBIL ===
+1. Daftar Plat Mobil
+2. Mobil Ingin Keluar
+3. Monitoring Plat Mobil Selesai
+
+=== DATA PLAT MOBIL ===
+Mobil 1 : B 1234 FAH
+Mobil 2 : B 2345 FIH
+
+=== MENU MONITORING PLAT MOBIL ===
+1. Daftar Plat Mobil
+2. Mobil Ingin Keluar
+3. Monitoring Plat Mobil Selesai
+Mobil dengan plat B 1234 FAH boleh keluar.
+
+=== MENU MONITORING PLAT MOBIL ===
+1. Daftar Plat Mobil
+2. Mobil Ingin Keluar
+3. Monitoring Plat Mobil Selesai
+Plat mobil tidak ditemukan, maka mobil tidak boleh keluar.
+
+=== MENU MONITORING PLAT MOBIL ===
+1. Daftar Plat Mobil
+2. Mobil Ingin Keluar
+3. Monitoring Plat Mobil Selesai
+Pilih menu (1/2/3): 3
+Monitoring selesai. Terima kasih!
