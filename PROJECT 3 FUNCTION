@@ -1,0 +1,46 @@
+data_Mahasiswa = [] # menyimpan list data nama mahasiswa
+data_kelas = [] # menyimpan dictionary list data nama mahasiswa dan nilai
+
+def view():
+    print("=== DATA KELAS ===")
+    for i in data_kelas:
+        print(f"Nama: {i['nama']}, Nilai: {i['nilai']}")
+
+def view2():
+    print("\n=== DATA NAMA MAHASISWA ===")
+    for n in data_Mahasiswa:
+        print(f"Nama: {n}")
+
+def average(nama, a):
+    global avg
+    avg = a
+    print(f"Nilai mata kuliah Python {nama}: {avg}")
+    data_Mahasiswa.append(nama) 
+    return {"nama": nama, "nilai": avg}
+
+data_kelas.append(average("Andre", 90))
+data_kelas.append(average("Papaw", 100))
+data_kelas.append(average("Yanto", 70))
+data_kelas.append(average("Yanti", 88))
+
+view2() # menampilkan daftar nama mahasiswa
+print("\n")
+view() # menampilkan data kelas yang dimana berisi daftar nama + nilai mahasiswa
+
+==== OUTPUT ====
+Nilai mata kuliah Python Andre: 90
+Nilai mata kuliah Python Papaw: 100
+Nilai mata kuliah Python Yanto: 70
+Nilai mata kuliah Python Yanti: 88
+
+=== DATA NAMA MAHASISWA ===
+Nama: Andre
+Nama: Papaw
+Nama: Yanto
+Nama: Yanti
+
+=== DATA KELAS ===
+Nama: Andre, Nilai: 90
+Nama: Papaw, Nilai: 100
+Nama: Yanto, Nilai: 70
+Nama: Yanti, Nilai: 88
