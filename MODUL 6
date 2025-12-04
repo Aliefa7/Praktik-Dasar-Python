@@ -1,0 +1,78 @@
+nomor = []
+
+def penambahan_mahasiswa(nama_mahasiswa):
+  nomor.append(nama_mahasiswa)
+
+def greeting(nama_mahasiswa):
+  nomor.append(nama_mahasiswa)
+  i = len(nomor)
+  print("Nama Mahasiswa", i ,":", nama_mahasiswa,"😎")
+
+def nomor_urut_mahasiswa():
+  print("Halo", greeting, " semangat belajarnya ya😁👍")
+
+
+greeting("pipaw")
+greeting("budi")
+greeting("yanto")
+
+nomor_urut_mahasiswa()
+
+greeting("pipaw")
+greeting("budi")
+greeting("yanto")
+
+==== OUTPUTNYA ======
+Nama Mahasiswa 1 : pipaw 😎
+Nama Mahasiswa 2 : budi 😎
+Nama Mahasiswa 3 : yanto 😎
+Halo <function greeting at 0x7900067f6ca0>  semangat belajarnya ya😁👍
+Nama Mahasiswa 4 : pipaw 😎
+Nama Mahasiswa 5 : budi 😎
+Nama Mahasiswa 6 : yanto 😎
+
+
+=== PROGRAM 2 ===
+ata_Mahasiswa = []
+data_kelas = []
+
+def view():
+  print("=== DATA KELAS ===")
+  if len(data_kelas) == 0:
+    print("datanya kosong")
+  else:
+    for i in data_kelas:
+      print(i)
+
+def view2():
+  print("\n===data Mahasiswa ===")
+  if len(data_Mahasiswa) == 0:
+    print("datanya kosong")
+  else:
+    for n in data_Mahasiswa:
+      print (n)
+
+def average(nama,a):
+  global avg
+  avg = (a)
+  print("nilai mata kuliah python",nama,":",avg)
+  return avg
+
+view()
+data_kelas.append(average("raffi",90))
+data_kelas.append(average("alifa",98))
+
+view2()
+view()
+
+=== OUTPUTNYA 2 ===
+=== DATA KELAS ===
+datanya kosong
+nilai mata kuliah python raffi : 90
+nilai mata kuliah python alifa : 98
+
+===data Mahasiswa ===
+datanya kosong
+=== DATA KELAS ===
+90
+98
