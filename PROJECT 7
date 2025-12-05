@@ -1,0 +1,51 @@
+# PROGRSAM SISTEM
+# Data ada 7 hari 
+# cari nilai max,min,mean
+# silahkan urutkan data tsb
+# silahkan tampilkan perhari
+# random angka-angka, size 35
+# data fixed = reshaping (7,5)
+# ([1,3,5,7,9], [2,4,6,8,10], [11,13,15,17,19], [12,14,16,18,20], [21,23,25,27,29], [22,24,26,28,30], [31,32,33,34,35])
+
+import numpy as np, random
+
+data_random = np.random.randint(10,40, size = 35)
+print("Data random yang didapatkan : ", data_random)
+
+new_data = data_random.reshape(7,5)
+print("\ndata reshaping: ", "\n", new_data)
+
+print("\nNilai max :", data_random.max())
+print("Nilai min :", data_random.min())
+print("Nilai mean :", data_random.mean())
+
+print("\n===== DATA SELAMA 7 HARI =====")
+print("月 :", new_data[0] )
+print("火 :", new_data[1])
+print("水 :", new_data[2])
+print("木 :", new_data[3])
+print("金 :", new_data[4])
+print("土 :", new_data[5])
+print("日 :", new_data[6])
+
+while True:
+  print("\n==== MENU SEVEN DAY ====")
+  print("1. Melihat DATA RANDOM Yang Didapatkan")
+  print("2. Melihat DATA PERHARI")
+  print("3. Melihat NILAI MAXX")
+  print("4. Melihat NILAI MINN")
+  print("5. Melihat NILAI MEAN")
+  print("6. MENU SELESAI")
+  pilihan = input("\nPilih Menu apa? (1/2/3/4/5/6): ")
+
+  if pilihan == "1":
+    print("\n=== DATA RANDOM ===")
+    if data:
+      for d in data_random:
+        print(d)
+
+  elif pilihan == "2":
+    print("\n=== DATA PERHARI ===")
+    if data:
+      for p in new_data:
+        print(new_data)
