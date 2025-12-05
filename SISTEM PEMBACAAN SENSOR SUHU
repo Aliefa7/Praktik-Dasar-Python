@@ -1,0 +1,199 @@
+import numpy as np, random
+
+data_random = np.random.randint(10,40, size = 35)
+print("Data random yang didapatkan : ", data_random)
+
+new_data = data_random.reshape(7,5)
+print("\ndata reshaping: ", "\n", new_data)
+
+print("\nNilai max :", data_random.max())
+print("Nilai min :", data_random.min())
+print("Nilai mean :", data_random.mean())
+
+曜日 = ["月", "火", "水", "木", "金", "土", "日"]
+print("\n===== DATA SELAMA 7 HARI =====")
+print("月 :", new_data[0] )
+print("火 :", new_data[1])
+print("水 :", new_data[2])
+print("木 :", new_data[3])
+print("金 :", new_data[4])
+print("土 :", new_data[5])
+print("日 :", new_data[6])
+print("-----------------------------------------------------------")
+
+while True:
+  print("\n==== MENU SEVEN DAY ====")
+  print("1. Melihat DATA RANDOM Yang Didapatkan")
+  print("2. Melihat DATA PERHARI")
+  print("3. Melihat NILAI MAXX")
+  print("4. Melihat NILAI MINN")
+  print("5. Melihat NILAI MEAN")
+  print("6. MENU SELESAI")
+  pilihan = input("\nPilih Menu apa? (1/2/3/4/5/6): ")
+
+  if pilihan == "1":
+    print("\n=== DATA RANDOM ===")
+    for d in data_random:
+      print(d)
+
+  elif pilihan == "2":
+    print("\n=== DATA PERHARI ===")
+    for i, p in enumerate(new_data, start=0):
+      print(f"{曜日[i]} : {p}")
+
+  elif pilihan == "3":
+    print("\n=== NILAI MAXIMUM ===")
+    print(data_random.max())
+
+  elif pilihan == "4":
+    print("\n=== NILAI MINIMUM ===")
+    print(data_random.min())
+
+  elif pilihan == "5":
+    print("\n=== NILAI MEAAN ===")
+    print(data_random.mean())
+
+  elif pilihan == "6":
+    print("\n=== ありがとうございます 皆さん😁👍 ===")
+    break
+  
+  else:
+    print("=== PILIHAN ANDA TIDAK TERSEDIA, MOHON COBA LAGI ===")
+
+========== PROGRAM OUTPUTNYA ==========
+Data random yang didapatkan :  [28 24 14 19 15 34 34 12 31 20 38 37 31 30 28 26 10 21 11 23 36 26 12 37
+ 24 25 28 25 12 20 20 28 26 24 25]
+
+data reshaping:  
+ [[28 24 14 19 15]
+ [34 34 12 31 20]
+ [38 37 31 30 28]
+ [26 10 21 11 23]
+ [36 26 12 37 24]
+ [25 28 25 12 20]
+ [20 28 26 24 25]]
+
+Nilai max : 38
+Nilai min : 10
+Nilai mean : 24.4
+
+===== DATA SELAMA 7 HARI =====
+月 : [28 24 14 19 15]
+火 : [34 34 12 31 20]
+水 : [38 37 31 30 28]
+木 : [26 10 21 11 23]
+金 : [36 26 12 37 24]
+土 : [25 28 25 12 20]
+日 : [20 28 26 24 25]
+-----------------------------------------------------------
+
+==== MENU SEVEN DAY ====
+1. Melihat DATA RANDOM Yang Didapatkan
+2. Melihat DATA PERHARI
+3. Melihat NILAI MAXX
+4. Melihat NILAI MINN
+5. Melihat NILAI MEAN
+6. MENU SELESAI
+
+Pilih Menu apa? (1/2/3/4/5/6): 1
+=== DATA RANDOM ===
+28
+24
+14
+19
+15
+34
+34
+12
+31
+20
+38
+37
+31
+30
+28
+26
+10
+21
+11
+23
+36
+26
+12
+37
+24
+25
+28
+25
+12
+20
+20
+28
+26
+24
+25
+
+==== MENU SEVEN DAY ====
+1. Melihat DATA RANDOM Yang Didapatkan
+2. Melihat DATA PERHARI
+3. Melihat NILAI MAXX
+4. Melihat NILAI MINN
+5. Melihat NILAI MEAN
+6. MENU SELESAI
+
+Pilih Menu apa? (1/2/3/4/5/6): 2
+=== DATA PERHARI ===
+月 : [28 24 14 19 15]
+火 : [34 34 12 31 20]
+水 : [38 37 31 30 28]
+木 : [26 10 21 11 23]
+金 : [36 26 12 37 24]
+土 : [25 28 25 12 20]
+日 : [20 28 26 24 25]
+
+==== MENU SEVEN DAY ====
+1. Melihat DATA RANDOM Yang Didapatkan
+2. Melihat DATA PERHARI
+3. Melihat NILAI MAXX
+4. Melihat NILAI MINN
+5. Melihat NILAI MEAN
+6. MENU SELESAI
+
+Pilih Menu apa? (1/2/3/4/5/6): 3
+=== NILAI MAXIMUM ===
+38
+
+==== MENU SEVEN DAY ====
+1. Melihat DATA RANDOM Yang Didapatkan
+2. Melihat DATA PERHARI
+3. Melihat NILAI MAXX
+4. Melihat NILAI MINN
+5. Melihat NILAI MEAN
+6. MENU SELESAI
+
+Pilih Menu apa? (1/2/3/4/5/6): 4
+=== NILAI MINIMUM ===
+10
+
+==== MENU SEVEN DAY ====
+1. Melihat DATA RANDOM Yang Didapatkan
+2. Melihat DATA PERHARI
+3. Melihat NILAI MAXX
+4. Melihat NILAI MINN
+5. Melihat NILAI MEAN
+6. MENU SELESAI
+
+Pilih Menu apa? (1/2/3/4/5/6): 5
+=== NILAI MEAAN ===
+24.4
+
+==== MENU SEVEN DAY ====
+1. Melihat DATA RANDOM Yang Didapatkan
+2. Melihat DATA PERHARI
+3. Melihat NILAI MAXX
+4. Melihat NILAI MINN
+5. Melihat NILAI MEAN
+6. MENU SELESAI
+
+Pilih Menu apa? (1/2/3/4/5/6): 6
+=== ありがとうございます 皆さん😁👍 ===
