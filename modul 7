@@ -1,0 +1,72 @@
+import os, time, numpy as np, random
+
+# print("akbaaarr")
+# input("click enter to continue")
+# os.system("clear")
+# print("tunggu ya...")
+# time.sleep(2)
+# os.system("clear")
+# print("alfiiiinnnn")
+
+# 1dimensi
+data = np.array([1,2,3,4,5,6])
+print(type(data))
+
+# 2dimensi
+arr = np.array([[1, 2, 3], [4, 5, 6],[3,4,3]])
+print("first row:",arr[0])
+print("jumlah:",arr[0,1] + arr[1,0])
+
+# untuk membaca array
+for i in arr:
+    for y in i:
+        print(y)
+
+# slice array
+data_slice = data[:5]
+print("data yang telah di slice:",data_slice)
+
+# cek tipe data yang disimpan di dalam array itu:
+print(arr.dtype)
+
+
+# copy and view data:
+x = arr.copy()
+x[0,1] = 100
+print("sebelum:",arr)
+print("setelah:",x)
+
+
+# shape:
+print(arr.shape)
+
+# reshaping:
+new_arr = data.reshape(2,3)
+print("data reshaping:",new_arr)
+
+
+# menghitung maksimal:
+print(arr.max())
+print(arr.min())
+
+# standart deviasi:
+print(arr.std())
+
+# mean
+print(arr.mean())
+
+# cara buat data random
+data_random = np.random.randint(50,100, size= 10)
+print("data yang didapatkan secara random:",data_random)
+print(data_random.max())
+
+# sort
+print(np.sort(data_random))
+
+# search data in numpy array
+search = np.where(arr == 3)
+print("ada di nomor indeks:",search)
+
+
+# for i in data:
+#     print(i)a elubel"
