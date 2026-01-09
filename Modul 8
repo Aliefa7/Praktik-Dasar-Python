@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+
+# Data Nilai 
+Nama = ["zoro", "lufi", "ipah", "sanji", "Brook", "Usop"]
+Nilai = [20, 85, 100, 70, 90, 98]
+
+# Grafik garis
+plt.figure(figsize=(8,6))
+plt.plot(Nama, Nilai, marker='o', color='purple', label="Nilai IQ")
+plt.title("Data Nilai IQ KRU WANGPISU")
+plt.xlabel("Nama")
+plt.ylabel("Nilai IQ")
+plt.legend()
+plt.grid(True)
+
+
+# Grafik batang
+plt.figure(figsize=(8,6))
+plt.bar(Nama, Nilai, color='pink')
+plt.title("Data Nilai IQ KRU WANGPISU")
+plt.xlabel("Nama")
+plt.ylabel("Nilai IQ")
+plt.show()
+
+# Untuk menampilkan grafik
+plt.show()
